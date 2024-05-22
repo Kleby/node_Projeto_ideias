@@ -18,7 +18,9 @@ const Usuario = require('./models/Usuario');
 
 // import Rotas
 const ideiasRotas = require('./routers/ideias.router');
-const IdeiaController = require('./controllers/ideia.controller');
+const authRotas = require('./routers/auth.router');
+
+// const IdeiaController = require('./controllers/ideia.controller');
 
 // configurando a engine
 app.engine('handlebars', ehb.engine());
@@ -70,9 +72,13 @@ app.use(( req, res, next) => {
 
 
 //rotas
+
+
 app.use('/ideias', ideiasRotas);
 
-app.get('/', IdeiaController.mostrarTodasAsIdeias);
+app.use('/', authRotas);
+
+app.get('/', ideiasRotas);
 
 
 // conexão com o banco

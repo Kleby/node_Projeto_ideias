@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --primary-color: #375a64;
+    --secondary-color: #ff0;
+    --tertiary-color: #ffcd00;
+    --color-hover: #ffd84c;
+    --bg-color: #222233;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    font-family: "Inter", sans-serif;
+}
+
+.img_conceito{
+    background-color: #fff;
+}
